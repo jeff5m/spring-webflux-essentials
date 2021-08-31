@@ -19,6 +19,7 @@
         <java.version>11</java.version>
         <blockhound.version>1.0.6.RELEASE</blockhound.version>
         <r2dbc-postgresql.version>0.8.8.RELEASE</r2dbc-postgresql.version>
+        <reactor-tools.version>3.4.9</reactor-tools.version>
     </properties>
 
     <dependencies>
@@ -38,6 +39,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-r2dbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-tools</artifactId>
+            <version>${reactor-tools.version}</version>
         </dependency>
 
         <dependency>
