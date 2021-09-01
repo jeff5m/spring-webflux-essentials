@@ -31,8 +31,7 @@ public class AnimeController {
     public Mono<Anime> findById(@PathVariable int id) {
         log.info("Finding anime with id: {} in database", id);
         return animeService.findById(id)
-                .switchIfEmpty(monoResponseStatusException())
-                .log(); // not necessary
+                .switchIfEmpty(monoResponseStatusException());
     }
 
     private <T> Mono<T> monoResponseStatusException() {
